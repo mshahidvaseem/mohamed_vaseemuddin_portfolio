@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M. Vaseemuddin Portfolio</title>
+<link rel="stylesheet" href="assets/js/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="#about">About</a>
+  <a href="#metrics">Metrics</a>
+  <a href="#resume">Resumes</a>
+  <a href="#contact">Contact</a>
+  <button onclick="toggleDark()" class="toggle-btn">🌙</button>
+</nav>
+
+<div class="floating-contact" onclick="scrollToContact()">✉️</div>
+
+<div class="container">
+
+<section id="about" class="card fade">
+  <img src="assets/images/avatar.jpg" class="avatar">
+  <h1>Mohamed Vaseemuddin</h1>
+  <p>Senior Workforce Management Manager</p>
+</section>
+
+<section id="metrics" class="card fade">
+  <h2>Career Metrics</h2>
+  <div class="metrics">
+    <div class="metric"><span class="count" data-target="30">0</span>%<p>Forecast Accuracy</p></div>
+    <div class="metric"><span class="count" data-target="15">0</span>%<p>SLA Reduction</p></div>
+    <div class="metric"><span class="count" data-target="20">0</span>%<p>Cost Savings</p></div>
+    <div class="metric"><span class="count" data-target="800">0</span><p>Agents Managed</p></div>
+  </div>
+</section>
+
+<aside class="resume-sidebar">
+  <h3>Download Resumes</h3>
+  <a href="assets/downloads/Mohamed_Vaseemuddin_1Page.docx" download>1-Page Resume</a>
+  <a href="assets/downloads/Mohamed_Vaseemuddin_2Page.docx" download>2-Page Resume</a>
+  <a href="assets/downloads/Mohamed_Vaseemuddin_Resume.docx" download>Full Resume</a>
+</aside>
+
+<section id="resume" class="card fade">
+  <h2>Resume Preview (PDF)</h2>
+  <iframe src="assets/downloads/Mohamed_Vaseemuddin_Resume.docx" style="width:100%;height:500px;border:0;"></iframe>
+</section>
+
+<section id="contact" class="card fade">
+  <h2>Contact Form</h2>
+  <form id="contactForm" onsubmit="sendMessage(event)">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <textarea name="msg" placeholder="Message"></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+  <p id="status"></p>
+</section>
+
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
