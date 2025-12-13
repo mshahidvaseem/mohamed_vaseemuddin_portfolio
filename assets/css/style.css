@@ -1,0 +1,1 @@
+body{font-family:Arial;} .nav a{margin:10px;} .container{padding:20px;} .typing{animation: typing 4s steps(40);} @keyframes typing{from{width:0;} to{width:100%;}}
