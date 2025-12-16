@@ -242,3 +242,11 @@ section {
   border-radius: 14px;
   margin-top: 40px;
 }
+
+body.dark #about,
+body.dark #accomplishments,
+body.dark #projects,
+body.dark #resume,
+body.dark #contact {
+  background: rgba(16, 25, 46, 0.45);
+}
