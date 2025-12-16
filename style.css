@@ -172,3 +172,8 @@ body.dark .achievement-circle span {
   color: #4da3ff;
 }
 
+/* Achievement Icons */
+.achievement-circle .icon {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
