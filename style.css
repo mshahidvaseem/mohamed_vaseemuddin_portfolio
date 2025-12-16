@@ -227,3 +227,18 @@ body.dark .achievement-circle p {
     grid-template-columns: 1fr;
   }
 }
+
+/* Subtle section separation */
+section {
+  padding: 70px 40px;
+}
+
+#about,
+#accomplishments,
+#projects,
+#resume,
+#contact {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+  margin-top: 40px;
+}
