@@ -177,3 +177,27 @@ body.dark .achievement-circle span {
   font-size: 22px;
   margin-bottom: 6px;
 }
+
+/* ================= ACHIEVEMENT GRID FIX ================= */
+
+.achievement-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  justify-items: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
