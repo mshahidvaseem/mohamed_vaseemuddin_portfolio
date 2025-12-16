@@ -138,3 +138,37 @@ button, .btn {
   font-size: 14px;
   padding: 0 12px;
 }
+
+/* ================= DARK MODE ================= */
+
+.dark-toggle {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  margin-left: 20px;
+}
+
+body.dark {
+  background: #0b1220;
+  color: #e6e6e6;
+}
+
+body.dark section {
+  background: transparent;
+}
+
+body.dark nav {
+  background: #060d1a;
+}
+
+body.dark .achievement-circle {
+  background: #10192e;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .achievement-circle span {
+  color: #4da3ff;
+}
+
