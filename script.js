@@ -18,3 +18,33 @@ toggle.addEventListener("click", () => {
   toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
+// ===== Counter Animation on Scroll =====
+const counters = document.querySelectorAll(".counter");
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    let count = 0;
+
+    const update = () => {
+      if (count < target) {
+        count++;
+        counter.textContent = count + "%";
+        setTimeout(update, 30);
+      }
+    };
+
+    update();
+  });
+};
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      observer.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector(".achievement-grid"));
