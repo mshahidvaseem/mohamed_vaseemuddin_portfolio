@@ -11,3 +11,30 @@ button,.btn{background:#0a2540;color:#fff;padding:10px;border:none}
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.education {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 6px;
+  color: #cfd8e3;
+}
+
+.social-links {
+  margin-top: 4px;
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  transition: transform 0.2s ease;
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.1);
+}
