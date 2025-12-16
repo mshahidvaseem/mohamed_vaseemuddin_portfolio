@@ -79,12 +79,15 @@ button, .btn {
 }
 
 .linkedin-link img {
-  width: 18px;
-  height: 18px;
+  width: 16px;        /* smaller size */
+  height: 16px;
   filter: invert(1);
-  transition: transform 0.2s ease;
+  opacity: 0.9;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .linkedin-link img:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
+  opacity: 1;
 }
+
