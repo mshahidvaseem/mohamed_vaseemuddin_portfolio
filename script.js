@@ -19,32 +19,38 @@ toggle.addEventListener("click", () => {
 });
 
 // ===== Counter Animation on Scroll =====
-const counters = document.querySelectorAll(".counter");
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
 
-const animateCounters = () => {
-  counters.forEach(counter => {
-    const target = +counter.dataset.target;
-    let count = 0;
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      let count = 0;
 
-    const update = () => {
-      if (count < target) {
-        count++;
-        counter.textContent = count + "%";
-        setTimeout(update, 30);
+      const update = () => {
+        if (count < target) {
+          count++;
+          counter.textContent = count + "%";
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target + "%";
+        }
+      };
+
+      update();
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        observer.disconnect();
       }
-    };
+    });
+  }, { threshold: 0.4 });
 
-    update();
-  });
-};
+  const grid = document.querySelector(".achievement-grid");
+  if (grid) observer.observe(grid);
+});
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounters();
-      observer.disconnect();
-    }
-  });
-}, { threshold: 0.5 });
-
-observer.observe(document.querySelector(".achievement-grid"));
